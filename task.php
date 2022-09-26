@@ -1,0 +1,35 @@
+<?php
+function showHome(){
+    $html= '<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <base href ="'.BASE_URL.'"/>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>To do list app</title>
+        
+    </head>
+    <body>
+        <h1>Tareas 2022</h1>
+        <ul>
+            <li>tarea 1</li>
+            <li>tarea 2</li>
+            <li>tarea 3</li>
+            <li>tarea 4</li>
+        </ul>
+    
+        <form action="createTask" method="post">
+            <input type="text" name="tittle" id="tittle">
+            <input type="text" name="description" id="description">
+            <input type="text" name="priority" id="priority">
+            <input type="checkbox" name="done" id="done">
+            <input type="submit" value="Guardar">
+    
+        </form>
+    </body>
+    </html>';
+
+    echo $html;
+}
+
