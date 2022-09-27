@@ -1,4 +1,5 @@
 <?php
+require_once 'db.php';
 require_once 'task.php';
 
 define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
@@ -19,8 +20,18 @@ define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] 
     case 'home':
         showHome();
         break;
-
-    
+    case 'createTask':
+        createTask();
+        break;
+    case 'deleteTask':
+        deleteTask($params[1]);// en 1 porque en 0 esta el deleteTask
+        break;
+    case 'updateTask':
+        updateTask($params[1]);
+        break;
+    case 'viewTask':
+        viewTask($params[1]);
+        break;
     default:
     echo ('404 page not found');
     break;
