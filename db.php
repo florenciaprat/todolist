@@ -8,10 +8,10 @@ function getTasks(){
     return $tareas;
     }
 
-    function insertTask($titulo,$descripcion,$prioridad,$finalizado){//son nombres de variables puede ir cualquier nombre pero abajo lo llamo igual
+    function insertTask($flor,$descripcion,$prioridad,$finalizado){//son nombres de variables puede ir cualquier nombre pero abajo lo llamo igual
         $db = new PDO('mysql:host=localhost;'.'dbname=db_tasks2021;charset=utf8' , 'root', '');
         $sentencia=$db->prepare("INSERT INTO tareas(titulo, descripcion, prioridad, finalizado)VALUES(?,?,?,?)"); //lo del principio son los nombres de las columnas de la tabla de la bbdd
-        $sentencia-> execute(array($titulo,$descripcion,$prioridad,$finalizado)); //aca lo llamo igual
+        $sentencia-> execute(array($flor,$descripcion,$prioridad,$finalizado)); //aca lo llamo igual
     
     
     }
